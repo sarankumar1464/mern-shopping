@@ -1,20 +1,19 @@
-import React from 'react';
-import { useState } from 'react';
-import './login.css';
-
+import React from "react";
+import { useState } from "react";
+import "./login.css";
 
 const Login = () => {
-  const [formData,setFormData]=useState({
-    email:"",
-    password:""
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
   });
- 
-  const handleChange=(e)=>{
+
+  const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value,
     });
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,6 +70,5 @@ const Login = () => {
     </div>
   );
 };
-
 
 export default Login;
