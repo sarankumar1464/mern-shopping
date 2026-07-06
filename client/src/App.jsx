@@ -1,13 +1,19 @@
-import {React} from 'react'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Register from "./components/Register/register.jsx";
+import Login from "./components/Login/login.jsx";
 
-import './App.css'
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to MERN Shopping App</h1>
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
