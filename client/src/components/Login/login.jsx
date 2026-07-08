@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "./login.css";
+import {Navigate} from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [isLoginSuccessful, setIsLoginSuccessful] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -32,12 +34,15 @@ const Login = () => {
       const response = await fetch(url, options);
       const data = await response.json();
       console.log("login response", response.status, data);
+      setIsLoginSuccessful(true);
     } catch (err) {
       console.error("login error", err);
     }
   };
 
   return (
+    <div>
+      {isLoginSuccessful && <Navigate to="/" />}
     <div className="login">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
@@ -67,6 +72,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
