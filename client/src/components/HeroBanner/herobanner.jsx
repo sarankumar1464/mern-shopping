@@ -8,7 +8,7 @@ const HeroBanner = () => {
       <div
         id="carouselExampleAutoplaying"
         className="carousel slide"
-        data-bs-ride="carousel"
+        data-bs-ride="true"
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
