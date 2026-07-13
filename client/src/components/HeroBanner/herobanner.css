@@ -12,7 +12,12 @@
 
 .hero-banner .carousel-item img {
   height: 470px;
+  width: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-banner .carousel-control-prev,
@@ -30,4 +35,27 @@
 .hero-banner .carousel-control-prev-icon,
 .hero-banner .carousel-control-next-icon {
   filter: invert(0.2);
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 0.8rem 0.8rem 0;
+  }
+
+  .hero-banner .carousel-item img {
+    height: auto;
+    min-height: 220px;
+    max-height: 320px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #f3f4f6;
+  }
+
+  .hero-banner .carousel-control-prev,
+  .hero-banner .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.4rem;
+  }
 }
