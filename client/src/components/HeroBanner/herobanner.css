@@ -1,0 +1,33 @@
+.hero-banner {
+  width: 100%;
+  padding: 1.2rem 1.2rem 0;
+}
+
+.hero-banner .carousel {
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.hero-banner .carousel-item img {
+  height: 470px;
+  object-fit: cover;
+}
+
+.hero-banner .carousel-control-prev,
+.hero-banner .carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  margin: 0 1.1rem;
+  opacity: 0.95;
+}
+
+.hero-banner .carousel-control-prev-icon,
+.hero-banner .carousel-control-next-icon {
+  filter: invert(0.2);
+}

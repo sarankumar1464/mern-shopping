@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./header.css";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            E-Basket
+            <span className="brand-icon">🛍️</span>
+            <span className="brand-text">E-Basket</span>
           </a>
           <button
             className="navbar-toggler"
