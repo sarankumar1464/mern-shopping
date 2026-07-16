@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./login.css";
-import {Navigate} from "react-router-dom";
+import {Navigate,Link} from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -33,8 +34,9 @@ const Login = () => {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log("login response", response.status, data);
+      console.log(data);
       setIsLoginSuccessful(true);
+      Cookies.set("jwt_token",data.token);
     } catch (err) {
       console.error("login error", err);
     }
@@ -71,6 +73,7 @@ const Login = () => {
         <div>
           <button type="submit">Login</button>
         </div>
+        <p>Not registered User click <Link to="/register">Register</Link></p>
       </form>
     </div>
     </div>
